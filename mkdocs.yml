@@ -1,3 +1,43 @@
 site_name: Multi Academy
+repo_name: Multi-Academy
+repo_url: https://github.com/Multi-Academy
+
 theme:
   name: material
+  logo: https://i.pinimg.com/originals/3c/65/b2/3c65b2c979f878fd4d1c623003df3bc9.png
+  favicon: https://i.pinimg.com/originals/3c/65/b2/3c65b2c979f878fd4d1c623003df3bc9.png
+
+  font:
+    text: Roboto
+  
+  icon:
+    repo: fontawesome/brands/github 
+
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - git-authors
+  - git-revision-date-localized:
+      enable_creation_date: true 
+  - git-committers:
+      repository: Multi-Academy/multi-academy.github.io
+      branch: main     
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Multi-Academy
