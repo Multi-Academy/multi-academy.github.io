@@ -9,12 +9,20 @@ theme:
 
   font:
     text: Roboto
-  
+
   icon:
-    repo: fontawesome/brands/github 
+    repo: fontawesome/brands/github
+
+  features:
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate 
+
 
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -29,15 +37,63 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
+  
 plugins:
+  - glightbox
   - git-authors
   - git-revision-date-localized:
-      enable_creation_date: true 
+      enable_creation_date: true
   - git-committers:
       repository: Multi-Academy/multi-academy.github.io
-      branch: main     
+      branch: main
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Multi-Academy
+
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+copyright: Copyright &copy; 2023 - 2023 Multi Academy
+
+
+nav:
+  - index.md
+  - Data Types:
+    - Pagination:
+      - section/index.md
+      - Page 1: section/page-1.md
+      - Page n: section/page-n.md
+    - DD:
+      - Lists: lists.md
+      - Sider: sider.md
+      - Tables: Tables.md
+      - diagrams.md
+      - Admonitions.md
+      - images.md
+      - formatting.md
